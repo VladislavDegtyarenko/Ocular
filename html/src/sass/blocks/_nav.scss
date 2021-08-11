@@ -1,0 +1,67 @@
+.nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-grow: 1;
+   &__menu {
+      display: flex;
+      padding-left: 0;
+      margin-bottom: 0;
+   }
+   &__item {
+      list-style-type: none;
+      margin-left: 0;
+      &:not(:last-child) {
+         margin-right: 30px;
+      }
+   }
+   &__link {
+      color: $black-alt;
+      font-weight: 300;
+      font-size: 18px;
+      text-decoration: none;
+      position: relative;
+      padding: 10px 0;
+      white-space: nowrap;
+      &:before {
+         content: "";
+         left: 0;
+         top: 0px;
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         background-color: #5e479b;
+         opacity: 0;
+         pointer-events: none;
+         transition: opacity 0.2s linear;
+      }
+      &:hover, &:active, &:focus {
+         text-decoration: none;
+         color: inherit;
+         &:before {
+            opacity: 1;
+         }
+      }
+   }
+   &__curtain {
+      visibility: hidden;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: #fcf8f2;
+      border-radius: 50%;
+      transform: translateY(100%) scale(0);
+      animation-duration: .6s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+   }
+   .curtain-up {
+      animation-name: curtainUp;
+    }
+    
+   .curtain-down {
+      animation-name: curtainDown;
+   }
+}

@@ -1,0 +1,98 @@
+.doctors {
+   padding: 120px 0;
+   #doctorsSlider {
+      margin-top: 60px;
+   }
+   &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+      border: 1px solid rgba(41, 41, 41, 0.15);
+      box-sizing: border-box;
+      border-radius: 20px;
+      padding: 0 20px 25px;
+      margin: 0px auto;
+      width: calc(100% - 20px);
+      height: 100%;
+      transition: box-shadow .2s linear;
+      box-sizing: border-box;
+      &:hover {
+         box-shadow: 0px 0px 20px rgba(79, 74, 157, 0.2);
+      }
+      &_img {
+         border-radius: 0px 0px 200px 200px;
+         overflow: hidden;
+         width: 100%;
+         height: auto;
+         object-fit: contain;
+         background-color: rgb(242, 242, 242);
+      }
+      &_name {
+         font-weight: 500;
+         font-size: 20px;
+         line-height: 125%;
+         color: $black-alt;
+         margin-top: 10px;
+      }
+      &_descr {
+         font-weight: 300;
+         font-size: 16px;
+         line-height: 150%;
+         color: #8a8a8a;
+         margin-top: 10px;
+      }
+      &_more {
+         background: transparent;
+         border: none;
+         padding: 0;
+         max-height: 100px;
+         margin-top: 20px;
+         overflow: hidden;
+         display: flex;
+         align-items: center;
+         opacity: 0;
+         visibility: visible;
+         transition: opacity .2s linear;
+         cursor: pointer;
+         img {
+            margin-left: 20px;
+            position: relative;
+            filter: grayscale(100%);
+         }
+         span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            background: -webkit-linear-gradient($black-alt, $black-alt);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+         }
+         &:hover {
+            transition: opacity .2s linear;
+            img {
+               filter: grayscale(0%);
+            }
+            span {
+               background: -webkit-linear-gradient($violet, $blue);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               transition: opacity .2s linear;
+            }
+         }
+      }
+      &:hover .doctors__card_more {
+         visibility: visible;
+         opacity: 1;
+      }
+   }
+   &__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px auto 0;
+      .button {
+         margin-right: 30px;
+      }
+   }
+}

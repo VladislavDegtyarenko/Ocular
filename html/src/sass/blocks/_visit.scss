@@ -1,0 +1,11 @@
+.visit {
+   background-color: #fcf8f2;
+   background-image: url("../img/visit/visit-bg.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 120px 0;
+   &__buttons {
+      margin: 60px auto 0;
+   }
+}

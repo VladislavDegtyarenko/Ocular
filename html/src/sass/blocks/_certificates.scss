@@ -1,0 +1,41 @@
+.certificates {
+   padding-bottom: 120px;
+   position: relative;
+   overflow: hidden;
+   &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 600px;
+      background-image: url('../img/bg-logo.svg');
+      background-position: bottom center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+   }
+   #certificatesSlider {
+      margin-top: 60px;
+      .splide__arrow {
+         top: 50%;
+      }
+   }
+   &__card {
+      border-radius: 6px;
+      overflow: hidden;
+      height: 465px;
+      transition: transform .3s ease-in-out;
+      &-click {
+         transform: scale(1.3);
+      }
+      img {
+         pointer-events: none;
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+}

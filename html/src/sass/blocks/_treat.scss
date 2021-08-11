@@ -1,0 +1,108 @@
+.treat {
+   padding: 80px 0;
+   &__title {
+      margin: 0 auto;
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 128%;
+      text-align: center;
+      color: $black-alt;
+      display: flex;
+      flex-direction: column;
+      span {
+         font-weight: inherit;
+      }
+      &_icon {
+         align-self: center;
+         object-fit: contain;
+         margin-bottom: 10px;
+      }
+   }
+   &__wrapper {
+      margin: 0 auto;
+      width: 1062px;
+      max-width: 100%;
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+   &__item {
+      width: 298px;
+      height: 60px;
+      flex-shrink: 0;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(79, 74, 157, 0.0);
+      border: 1px solid rgba(41, 41, 41, 0.15);
+      transition: opacity 0.3s linear, box-shadow 0.2s linear;
+      &:nth-child(1n + 8) {
+         max-height: 0px;
+         opacity: 0;
+         margin-bottom: 0px;
+      }
+   }
+
+   #treat__checkbox {
+      width: 100%;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+   }
+
+   #treat__checkbox ~ label {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+      margin-top: 5px;
+      text-decoration: underline;
+
+      span {
+         background: -webkit-linear-gradient($black-alt, $black-alt);
+         background: linear-gradient($black-alt, $black-alt);
+         -webkit-background-clip: text;
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 21px;
+         text-align: center;
+         text-decoration-line: underline;
+         text-align: center;
+      }
+      &:hover span {
+         background: -webkit-linear-gradient($violet, $blue);
+         background: linear-gradient($violet, $blue);
+         -webkit-background-clip: text;
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+      span {
+         display: block;
+      }
+   }
+
+   #treat__checkbox:checked ~ .treat__item:nth-child(1n + 8) {
+      max-height: 100px;
+      opacity: 1;
+      margin-bottom: 40px;
+   }
+
+   #treat__checkbox ~ label .showmore {
+      display: block;
+   }
+   #treat__checkbox ~ label .showless {
+      display: none;
+   }
+   #treat__checkbox:checked ~ label .showmore {
+      display: none;
+   }
+   #treat__checkbox:checked ~ label .showless {
+      display: block;
+   }
+}

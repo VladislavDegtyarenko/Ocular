@@ -1,0 +1,58 @@
+@import "libs/bootstrap-reboot.min.css";
+@import "libs/splide-core.min.css";
+@import "base/fonts";
+@import "base/variables";
+@import "base/animations";
+@import "blocks/buttons";
+@import "blocks/splide";
+@import "blocks/modal";
+
+* {
+   font-family: "Gilroy";
+   font-weight: 400;
+}
+html {
+   scroll-behavior: smooth;
+ }
+
+.container {
+   width: 1360px;
+   margin: 0 auto;
+   position: relative;
+}
+
+.noScroll {
+   overflow: hidden;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin-bottom: 0;
+}
+
+button, input, textarea {
+   &:focus {
+      outline: none;
+   }
+}
+
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/promo";
+@import "blocks/care";
+@import "blocks/stats";
+@import "blocks/treat";
+@import "blocks/services";
+@import "blocks/doctors";
+@import "blocks/certificates";
+@import "blocks/reviews";
+@import "blocks/equipment";
+@import "blocks/visit";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "base/media";

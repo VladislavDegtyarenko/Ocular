@@ -1,0 +1,208 @@
+.services {
+   min-height: 900px;
+   padding: 120px 0;
+   position: relative;
+   overflow: hidden;
+   background-color: #FCF8F2;
+   &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 600px;
+      background-image: url('../img/bg-logo.svg');
+      background-position: bottom center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+   }
+   &__helper {
+      background: transparent;
+      padding: 0;
+      width: 27px;
+      height: 27px;
+      border: none;
+      display: inline-flex;
+      margin-left: 5px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__menu {
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+   }
+   &__selected {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      text-align: center;
+      color: $blue;
+      padding: 12px 35px 12px 15px;
+      position: relative;
+      display: none;
+   }
+   &__tabs {
+      margin-top: 40px; /* временный отступ */
+      display: flex;
+      justify-content: space-evenly;
+      border-top: solid 1px rgba($color: $blue, $alpha: 0.25);
+   }
+   &__tab {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: center;
+      color: $black-alt;
+      padding: 15px 10px;
+      border: none;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+      &:focus {
+         outline: none;
+      }
+      &-active {
+         &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: $blue;
+            border-radius: 0px 0px 2px 2px;
+         }
+      }
+   }
+
+   &__slider {
+      margin-top: 0px;
+      //display: none;
+      visibility: hidden;
+      max-height: 0px;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.3s linear;
+      &-active {
+         opacity: 1;
+         margin-top: 20px;
+         //display: block;
+         visibility: visible;
+         max-height: 1000px;
+         min-height: 360px;
+      }
+   }
+   .splide__slide {
+      padding: 15px;
+   }
+   .splide__arrow {
+      top: 34%;
+   }
+   
+
+   &__card {
+      display: flex;
+      padding: 25px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0px 0px 15px rgba(79, 74, 157, 0.2);
+      //min-height: 220px;
+      height: 100%;
+      transition: opacity .2s linear;
+      //width: calc(33% - 30px);
+      &_left {
+         margin-right: 40px;
+      }
+      &_icon {
+         width: 100px;
+         height: 110px;
+         object-fit: contain;
+      }
+      &_price {
+         font-size: 16px;
+         line-height: 162%;
+         color: $black-alt;
+         font-weight: 400;
+         margin-top: 10px;
+         span {
+            font-weight: 500;
+         }
+      }
+      &_right {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+      }
+      &_title {
+         font-weight: 500;
+         font-size: 20px;
+         line-height: 125%;
+         color: $black-alt;
+         margin-bottom: 0;
+      }
+      &_descr {
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 150%;
+         color: #8a8a8a;
+         margin-top: 20px;
+         margin-bottom: 0;
+      }
+      &_more {
+         background: transparent;
+         border: none;
+         padding: 0;
+         max-height: 100px;
+         margin-top: 20px;
+         overflow: hidden;
+         display: flex;
+         align-items: center;
+         opacity: 0;
+         visibility: visible;
+         transition: opacity .2s linear;
+         cursor: pointer;
+         img {
+            margin-left: 20px;
+            position: relative;
+            filter: grayscale(100%);
+         }
+         span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            background: -webkit-linear-gradient($black-alt, $black-alt);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+         }
+         &:hover {
+            transition: opacity .2s linear;
+            img {
+               filter: grayscale(0%);
+            }
+            span {
+               background: -webkit-linear-gradient($violet, $blue);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               transition: opacity .2s linear;
+            }
+         }
+      }
+      &:hover .services__card_more {
+         visibility: visible;
+         opacity: 1;
+      }
+   }
+
+   #servicesSlider {
+      .splide__slide {
+         height: 280px;
+      }
+   }
+}

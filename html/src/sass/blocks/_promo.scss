@@ -1,0 +1,57 @@
+.promo {
+   margin-top: 100px;
+   background-color: rgba($color: $black-alt, $alpha: 0.6);
+   position: relative;
+   &__inner {
+      position: relative;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 660px;
+   }
+   &__title {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 64px;
+      &_break {
+         display: none;
+      }
+   }
+   &__descr {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 27px;
+      color: #fff;
+      width: 50%;
+   }
+   &__buttons {
+      display: flex;
+      margin-top: 40px;
+      .button:first-child {
+         margin-right: 30px;
+      }
+   }
+   &__video {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      video {
+         position: absolute;
+         right: 0;
+         bottom: 0;
+         min-width: 100%;
+         min-height: 100%;
+         width: 100%;
+         object-fit: cover;
+         height: auto;
+         z-index: -100;
+         background-size: cover;
+         overflow: hidden;
+      }
+   }
+}
