@@ -3,10 +3,10 @@
    src: url("../fonts/Gilroy-Light.eot");
    src: local("Gilroy Light"), local("Gilroy-Light"),
       url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/Gilroy-Light.woff") format("woff"),
-      url("../fonts/Gilroy-Light.ttf") format("truetype");
+      url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.ttf") format("truetype");
    font-weight: 300;
    font-style: normal;
+   font-display: swap;
 }
 
 @font-face {
@@ -14,10 +14,10 @@
    src: url("../fonts/Gilroy-Regular.eot");
    src: local("Gilroy Regular"), local("Gilroy-Regular"),
       url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/Gilroy-Regular.woff") format("woff"),
-      url("../fonts/Gilroy-Regular.ttf") format("truetype");
+      url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
    font-weight: 400;
    font-style: normal;
+   font-display: swap;
 }
 
 @font-face {
@@ -25,8 +25,8 @@
    src: url("../fonts/Gilroy-Medium.eot");
    src: local("Gilroy Medium"), local("Gilroy-Medium"),
       url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/Gilroy-Medium.woff") format("woff"),
-      url("../fonts/Gilroy-Medium.ttf") format("truetype");
+      url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
    font-weight: 500;
    font-style: normal;
+   font-display: swap;
 }
