@@ -830,6 +830,7 @@
                                  src="img/services/services-lazerna-korektsia-zoru.svg"
                                  alt=""
                                  class="services__card_icon"
+                                 loading="lazy"
                               />
                               <div class="services__card_price"><span>950</span> грн.</div>
                            </div>
@@ -862,6 +863,7 @@
                                  src="img/services/services-lazeri.svg"
                                  alt=""
                                  class="services__card_icon"
+                                 loading="lazy"
                               />
                               <div class="services__card_price"><span>950</span> грн.</div>
                            </div>
@@ -2096,6 +2098,13 @@
       </div>
 
       <section class="visit">
+         <div class="visit__background">
+            <picture>
+               <source srcset="img/visit/visit-bg.avif" type="image/avif" />
+               <source srcset="img/visit/visit-bg.png" type="image/jpeg" />
+               <img class="visit__background_img" src="img/visit/visit-bg.png" alt="" />
+            </picture>
+         </div>
          <div class="container">
             <h2 class="treat__title">
                <img loading="lazy" class="treat__title_icon" src="img/visit/visit.svg" alt="visit" />
